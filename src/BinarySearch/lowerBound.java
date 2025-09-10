@@ -15,8 +15,15 @@ public class lowerBound {
         return ans;
     }
 
+    public static int firstOccurence(int[] arr, int target){
+        int ans = lowerBound(arr, target);
+        if(ans < arr.length && arr[ans] == target) return ans;
+        else return -1;
+    }
+
     public static void main(String[] args) {
-        int[] arr = {2,2,2,2,2,3};
-        System.out.println(lowerBound(arr,2));
+        int[] arr = {1, 2, 2, 3};
+        System.out.println("Lower Bound val is: " + lowerBound(arr,10));
+        System.out.println("First occurence is: " + firstOccurence(arr, 2));
     }
 }

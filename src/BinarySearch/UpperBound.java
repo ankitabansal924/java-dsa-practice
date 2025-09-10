@@ -17,8 +17,16 @@ public class UpperBound {
         }
         return ans;
     }
+
+    public static int lastOccurenece(int[] arr, int target){
+        int ans = upperBound(arr, target);
+        if(ans < arr.length && arr[ans - 1] == target) return ans - 1;
+        else return -1;
+    }
+
     public static void main(String[] args) {
         int[] arr = {1, 2, 2, 3, 4, 6, 8, 9};
         System.out.println(upperBound(arr, 2));
+        System.out.println(lastOccurenece(arr, 2));
     }
 }
