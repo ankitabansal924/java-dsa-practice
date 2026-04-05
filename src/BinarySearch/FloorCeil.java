@@ -5,7 +5,6 @@ public class FloorCeil {
         int n = arr.length;
         int[] ans = {-1, -1};
 
-
         lowerBound lb = new lowerBound();
         int ceil = lb.lowerBound(arr, target);
         if(ceil < n) ans[1] = arr[ceil];
